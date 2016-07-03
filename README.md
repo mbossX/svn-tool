@@ -5,7 +5,7 @@ This is a tool of svn used in vscode!
 
 -------
 
-># Useage
+># Usage
 First of all, set the config in `settings.json`, and set it like this:   
 >>`"svntool.path": "C:\\svn.exe",`      
 >>` "svntool.url": "svn://a.b.com/aaa",`     
