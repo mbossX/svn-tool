@@ -1,0 +1,61 @@
+{
+    "name": "svntool",
+    "displayName": "svn-tool",
+    "description": "svn tool",
+    "version": "0.0.1",
+    "publisher": "endless",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.svnCO",
+        "onCommand:extension.svnCI",
+        "onCommand:extension.svnUP"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.svnCO",
+                "title": "SVN CheckOut"
+            },
+            {
+                "command": "extension.svnCI",
+                "title": "SVN Commit"
+            },
+            {
+                "command": "extension.svnUP",
+                "title": "SVN Update"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.svnCO",
+                "key": "ctrl+v ctrl+k",
+                "mac": "cmd+v cmd+k"
+            },
+            {
+                "command": "extension.svnCI",
+                "key": "ctrl+v ctrl+c",
+                "mac": "cmd+v cmd+c"
+            },
+            {
+                "command": "extension.svnUP",
+                "key": "ctrl+v ctrl+u",
+                "mac": "cmd+v cmd+u"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+        "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "typescript": "^1.8.5",
+        "vscode": "^0.11.0"
+    }
+}
